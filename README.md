@@ -23,8 +23,12 @@ The script utilizes the [DSInternals PowerShell module](https://github.com/Micha
 ## Prerequisites
 
 - PowerShell (preferably version 5.1 or later)
-- The DSInternals PowerShell module must be installed:
-  Copy the DSInternals Folder to C:\Program Files\WindowsPowerShell\Modules
+- The [DSInternals PowerShell module](https://github.com/MichaelGrafnetter/DSInternals) must be installed:
+  ```powershell
+  Install-Module DSInternals -Scope CurrentUser
+  ```
+  For systems without internet access, download the module on another machine with `Save-Module DSInternals -Path .\modules` and copy the `DSInternals` folder to `C:\Program Files\WindowsPowerShell\Modules` on the target machine.
+  The last tested version of DSInternal was 6.1.1, which can be specified with the `-RequiredVersion 6.1.1` parameter. Newer versions (e.g. 7.x) are expected to work but have not been verified.
 - **Permissions:**
   - **Online Mode**: Rights to replicate directory changes (e.g., membership in "Domain Admins" or delegated permissions for `Get-ADReplAccount`).
   - **Offline Mode**: Read access to an AD database backup (`ntds.dit`) and the associated SYSTEM hive file.
