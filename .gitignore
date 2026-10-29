@@ -1,0 +1,22 @@
+# macOS / Windows
+.DS_Store
+__MACOSX/
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Third-party module (install via PowerShell Gallery)
+DSInternals/
+
+# Sensitive data - never commit
+*.csv
+*.dit
+*.jdb
+*.edb
+SYSTEM
+*_cleaned.txt
+leaks/
+*.log
